@@ -1,0 +1,98 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    height: 90vh; /* Full height */
+    background: #0B0C10; /* Dark background */
+    color: #66FCF1; /* Light cyan text color */
+}
+.btn{
+    padding: 10px 20px;
+   border-color: #66FCF1 !important;
+    color: #66FCF1 !important;
+}
+p{
+    margin: 0px;
+}
+.btn:hover{background-color: #45A29F;
+}
+input, select{
+    background: transparent !important;
+    border-color: #66FCF1 !important;
+    border-radius: 0px !important;
+    color: #fff !important;
+}
+input::placeholder, select::placeholder{
+    color: #fff !important;
+}
+option{
+    background: #0B0C10;
+    color: #fff !important;
+}
+
+.sidebar {
+    background: rgba(11, 12, 16, 0.9); /* Slightly transparent dark background */
+    color: #66FCF1; /* Light cyan text color */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(197, 198, 199, 0.2); /* Shadow color */
+}
+
+.main-content {
+    background: #0B0C10; /* Darker background for the main content */
+    color: #66FCF1; /* Light cyan text color */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(197, 198, 199, 0.1); /* Shadow color */
+}
+
+.template-area {
+    padding: 20px;
+    height: 100%; /* Fill available height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for template slots */
+    gap: 10px;
+}
+
+.template-slot {
+    min-height: 150px;
+    background-color: #ececec; /* Light teal color for slots */
+    border: none; /* No border */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.template-slot:hover {
+    background-color: #d8d8d8; /* Hover color for slots */
+    box-shadow: 0 4px 10px rgba(197, 198, 199, 0.5); /* Shadow on hover */
+}
+
+.draggable-item {
+    height: auto;
+    border-radius: 8px;
+    background-color: #FFF; /* Button color */
+    color: #0B0C10; /* Dark text color */
+    border: none; /* No border */
+    cursor: move;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(197, 198, 199, 0.2); /* Shadow color */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.draggable-item:hover {
+    box-shadow: 0 8px 16px rgba(197, 198, 199, 0.5); /* Shadow on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .template-area {
+        grid-template-columns: 1fr; /* Stack in a single column on smaller screens */
+    }
+}
